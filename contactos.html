@@ -1,0 +1,129 @@
+<
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - PetCare</title>
+    <link rel="Veterinaria icono" type="imagenicono" href="IMG/LOGO (1).jpg">
+    <link rel="stylesheet" href="CSS/estilos-contacto.css">
+    <!-- Cargar fuentes -->
+    <style>
+        @font-face {
+            font-family: 'Myriad Pro';
+            src: url('FUENTES/Myriad\ Pro\ Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'AVELIRE';
+            src: url('FUENTES/AVELIRE.woff') format('woff');
+        }
+        @font-face {
+            font-family: 'Moving Skate';
+            src: url('FUENTES/Moving\ Skate.ttf') format('truetype');
+        }
+        
+    </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <li class="logopng"><a href="index.html"><img src="IMG/Logo.png" alt="Logo" width="300px"></a></li>
+                <ul class="menu-horizontal">
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="equipo_medico.html">Equipo Médico</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li class="search-box">
+                        <form action="#" method="GET">
+                            <input type="text" placeholder="Buscar..." name="buscar">
+                        </form>
+                    </li>    
+                    <img src="IMG/LUPA-Photoroom.png" alt="Buscar" class="lupa" height="30px">
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <p>Contacto</p>
+                <div class="formulario">
+                    <form action="mailto:tucorreo@example.com" method="POST" enctype="text/plain">
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="campo">
+                            <label for="mascota">Mascota:</label>
+                            <select id="mascota" name="mascota" onchange="checkOtro()">
+                                <option value="perro">Perro</option>
+                                <option value="gato">Gato</option>
+                                <option value="conejo">Conejo</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <input type="text" id="otra_mascota" name="otra_mascota" placeholder="Especificar otra mascota" style="display: none;">
+                        </div>
+                        <div class="campo">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="campo grande">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            
+                <script>
+                    function checkOtro() {
+                        var mascotaSelect = document.getElementById("mascota");
+                        var otraMascotaInput = document.getElementById("otra_mascota");
+            
+                        if (mascotaSelect.value === "otro") {
+                            otraMascotaInput.style.display = "block";
+                            otraMascotaInput.setAttribute("required", "required");
+                        } else {
+                            otraMascotaInput.style.display = "none";
+                            otraMascotaInput.removeAttribute("required");
+                        }
+                    }
+                </script>
+                <br><br><br><br><br><br><br><br><br><br><br>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-contenedor">
+                <div class="footer-1">
+                    h3>Contáctanos</h3>
+                    <a href="contactos.html">Atención al cliente</a>
+                    <p>Teléfono: 123 456 789</p>
+                    <a href="contactos.html">Formulario de contacto.</a> <br>
+                    <a href="servicios.html">Servicios</a><br>
+                    <a href="servicios.html">Equipo Médico</a> <br>
+                    <a href="servicios.html">Testimonios</a>
+                </div>
+                <div class="footer-1">
+                    <h3>Políticas de Privacidad</h3>
+                    <p>© 2024 - Todos los derechos 
+                        reservados.</p>
+                    <a href="politicas.html">Revisa las politicas de Privacidad</a>
+                </div>
+                <div class="footer-1">
+                    <a href="index.html"><img src="IMG/Logo.png" alt="Logo" class="imgfooter"></a>
+                </div> 
+                <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i><img src="IMG/Facebook.jpg" alt=""></a>
+                <a href="#"><i class="fab fa-Whats"></i><img src="IMG/whatsApp.jpg" alt=""></a>
+                <a href="#"><i class="fab fa-instagram"></i><img src="IMG/logo redes.jpg" alt=""></a>
+            </div>
+            </div>
+                <div class="footer-abajo">
+                <p>Horarios de Atención: Lunes - Sabado  8am - 6pm / Domingos - Festivos 9am - 4pm    <p></p>Sitio hecho por “Carolina Mora”</p>
+            </div> 
+           
+        </footer>            
+    </body>    
+</html>
